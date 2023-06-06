@@ -9,7 +9,7 @@ DATA_PATH = pathlib.Path("data/")
 DATA_PATH.mkdir(parents=True, exist_ok=True)
 # MAX_RESULT = 100
 # DATE_END = '2020-05-08'
-HASHTAG = 'depression'
+HASHTAG = 'หมอลาออก'
 JSON_FILENAME = DATA_PATH / str(datetime.datetime.today().date())
 
 def sns_scrape():
@@ -23,7 +23,7 @@ def scrape_twint():
     # c.Until = str(datetime.datetime.today().date() + datetime.timedelta(days=1))
     c.Since = str(datetime.datetime.today().replace(hour=0, minute=0, second=0, microsecond=0) - datetime.timedelta(days=1))
     # c.Username = "test"
-    c.Search = "#depression"
+    c.Search = "#หมอลาออก"
     c.Location=True
     c.Images = True
     # c.Limit = 50
